@@ -1,0 +1,473 @@
+16:53:42 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../stopWatch.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"stopWatch.d" -MT"stopWatch.o" -c -o "stopWatch.o" "../stopWatch.c"
+In file included from ../stopWatch.c:10:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../stopWatch.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o ./stopWatch.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4242 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+16:54:13 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o ./stopWatch.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4242 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:11:05 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4242 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:17:16 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../main.c:11:24: error: Stop_Watch.h: No such file or directory
+../main.c: In function 'main':
+../main.c:24: error: 'Flag' undeclared (first use in this function)
+../main.c:24: error: (Each undeclared identifier is reported only once
+../main.c:24: error: for each function it appears in.)
+../main.c:25: warning: implicit declaration of function 'Timer1_Init'
+../main.c:26: warning: implicit declaration of function 'INT0_Init'
+../main.c:27: warning: implicit declaration of function 'INT1_Init'
+../main.c:28: warning: implicit declaration of function 'INT2_Init'
+../main.c:32: warning: implicit declaration of function 'SET_BIT'
+../main.c:38: error: 'i' undeclared (first use in this function)
+../main.c:41: error: 'Time' undeclared (first use in this function)
+../main.c:47: warning: implicit declaration of function 'Stop_Watch'
+../main.c: In function '__vector_7':
+../main.c:57: error: 'Flag' undeclared (first use in this function)
+../main.c: In function '__vector_1':
+../main.c:63: error: 'i' undeclared (first use in this function)
+../main.c:64: error: 'Time' undeclared (first use in this function)
+../main.c: In function '__vector_2':
+../main.c:68: warning: implicit declaration of function 'CLEAR_BIT'
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:17:51 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building file: ../stopWatch.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"stopWatch.d" -MT"stopWatch.o" -c -o "stopWatch.o" "../stopWatch.c"
+In file included from ../stopWatch.c:10:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../stopWatch.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o ./stopWatch.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    4242 bytes (12.9% Full)
+(.text + .data + .bootloader)
+
+Data:         16 bytes (0.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:25:48 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5490 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:         11 bytes (0.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:28:06 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:11:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:39:15 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5852 bytes (17.9% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:40:25 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5852 bytes (17.9% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:40:48 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:11:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5502 bytes (16.8% Full)
+(.text + .data + .bootloader)
+
+Data:         14 bytes (0.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:42:33 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:14:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5852 bytes (17.9% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:47:20 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5852 bytes (17.9% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:01:33 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5852 bytes (17.9% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+18:04:32 **** Incremental Build of configuration Debug for project stopWatch ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:3:
+c:/program files/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../main.c
+ 
+Building target: stopWatch.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,stopWatch.map -mmcu=atmega32 -o "stopWatch.elf"  ./main.o   
+Finished building target: stopWatch.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S stopWatch.elf  >"stopWatch.lss"
+Finished building: stopWatch.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex stopWatch.elf  "stopWatch.hex"
+Finished building: stopWatch.hex
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 stopWatch.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    5852 bytes (17.9% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (1.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
